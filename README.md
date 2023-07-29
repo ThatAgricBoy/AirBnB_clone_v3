@@ -150,12 +150,12 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) quit
 ```
 
-## Bugs
+## Bugs:
 No known bugs at this time. 
 
-## Authors
+## Authors:
 Favour Ocheja <favourocheja@gmail.com>
 Samuel John <Samuel John>
 
-## License
+## License:
 Public Domain. No copy write protection. 
