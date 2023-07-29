@@ -155,7 +155,7 @@ No known bugs at this time.
 
 ## Authors:
 Favour Ocheja <favourocheja@gmail.com>
-Samuel John <Samuel John>
+Samuel John <Samueljohn3999@gmail.com>
 
 ## License:
 Public Domain. No copy write protection. 
