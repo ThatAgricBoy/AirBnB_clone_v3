@@ -19,7 +19,7 @@ app.url_map.strict_slashes = False
 
 # flask server environmental setup
 host = os.getenv('HBNB_API_HOST', '0.0.0.0')
-port = os.getenv('HBNB_API_PORT', 5000)
+port = int(os.getenv('HBNB_API_PORT', 5002))
 
 # Cross-Origin Resource Sharing
 cors = CORS(app, resources={r'/*': {'origins': host}})
@@ -60,6 +60,15 @@ def setup_global_errors():
     """
     for cls in HTTPException.__subclasses__():
         app.register_error_handler(cls, global_error_handler)
+
+
+@app.route('/api/v1/states', methods=['GET'], strict_slashes=False)
+def get_states():
+    states = storage.all('State')
+    print(states)  # Add this line to debug
+    state_list = [state.to_dict() for state in states.values()]
+    print(state_list)
+    return jsonify(state_list)
 
 
 if __name__ == "__main__":
